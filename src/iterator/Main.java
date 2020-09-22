@@ -17,9 +17,19 @@ public class Main {
 
         ListIterator<Integer> myIterator = myList.listIterator();
 
+        // В задании сказано, что надо увеличить все элементы на 1. Я думаю,
+        // что надо увеличить их и *положить* обратно в массив.
+
+        Integer temp; // переменная для хранения значения, на которое указывает итератор
         while(myIterator.hasNext()) {
-            Integer integer = myIterator.next() + 1;
-            System.out.println(integer);
+            temp = myIterator.next(); // получаем значение переменной
+            myIterator.set(temp + 1); // увеличиваем на 1 и сохраняем
+            // ListIterator.set() кладет значение вместо последнего элемента, который он вернул
+        }
+
+        // Печатаем массив
+        for (Integer i: myList) {
+            System.out.println(i);
         }
     }
 
