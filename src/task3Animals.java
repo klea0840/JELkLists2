@@ -34,6 +34,5 @@ public class task3Animals {
 
         System.out.println("The size of the list is " + zoo.size());
 
-
     }
 }
